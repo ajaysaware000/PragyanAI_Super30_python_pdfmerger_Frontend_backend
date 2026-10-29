@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Merge multiple PDF files quickly and easily."
+    >
+
+    <title>PDF Merger</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         MAIN CONTAINER
+    ========================== -->
+
+    <div class="container">
+
+        <!-- =========================
+             HEADER
+        ========================== -->
+
+        <header class="header">
+
+            <div class="logo">
+                📄
+            </div>
+
+            <h1>
+                PDF Merger
+            </h1>
+
+            <p>
+                Upload, arrange and merge multiple PDF files
+                into one document.
+            </p>
+
+        </header>
+
+
+        <!-- =========================
+             MAIN CARD
+        ========================== -->
+
+        <main class="card">
+
+
+            <!-- =========================
+                 UPLOAD AREA
+            ========================== -->
+
+            <section
+                class="upload-area"
+                id="dropZone"
+            >
+
+                <div class="upload-icon">
+                    📁
+                </div>
+
+                <h2>
+                    Upload PDF Files
+                </h2>
+
+                <p>
+                    Drag & drop your PDF files here
+                </p>
+
+                <span class="or-text">
+                    or
+                </span>
+
+                <button
+                    type="button"
+                    id="browseBtn"
+                    class="browse-btn"
+                >
+                    Choose PDF Files
+                </button>
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    accept=".pdf,application/pdf"
+                    multiple
+                    hidden
+                >
+
+                <p class="upload-info">
+                    You can select multiple PDF files
+                </p>
+
+            </section>
+
+
+            <!-- =========================
+                 SELECTED FILES
+            ========================== -->
+
+            <section class="files-section">
+
+                <div class="section-header">
+
+                    <h2>
+                        Selected Files
+                    </h2>
+
+                    <span id="fileCount">
+                        0 files
+                    </span>
+
+                </div>
+
+
+                <!-- File list -->
+
+                <div
+                    id="fileList"
+                    class="file-list"
+                >
+
+                    <div class="empty-message">
+
+                        <div class="empty-icon">
+                            📄
+                        </div>
+
+                        <p>
+                            No PDF files selected
+                        </p>
+
+                        <small>
+                            Add at least two PDF files to merge
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 ACTION BUTTONS
+            ========================== -->
+
+            <section class="action-buttons">
+
+                <button
+                    type="button"
+                    id="clearBtn"
+                    class="clear-btn"
+                >
+                    🗑 Clear All
+                </button>
+
+                <button
+                    type="button"
+                    id="mergeBtn"
+                    class="merge-btn"
+                    disabled
+                >
+                    🔗 Merge PDFs
+                </button>
+
+            </section>
+
+
+            <!-- =========================
+                 STATUS MESSAGE
+            ========================== -->
+
+            <div
+                id="message"
+                class="message"
+                role="status"
+                aria-live="polite"
+            ></div>
+
+
+            <!-- =========================
+                 DOWNLOAD SECTION
+            ========================== -->
+
+            <section
+                id="downloadSection"
+                class="download-section"
+                style="display: none;"
+            >
+
+                <div class="success-icon">
+                    ✅
+                </div>
+
+                <h2>
+                    PDF Merged Successfully!
+                </h2>
+
+                <p>
+                    Your merged PDF is ready to download.
+                </p>
+
+                <a
+                    id="downloadBtn"
+                    class="download-btn"
+                    href="#"
+                    download="merged.pdf"
+                >
+                    ⬇ Download Merged PDF
+                </a>
+
+            </section>
+
+        </main>
+
+
+        <!-- =========================
+             FOOTER
+        ========================== -->
+
+        <footer>
+
+            <p>
+                PDF Merger
+            </p>
+
+            <span>
+                HTML + CSS + JavaScript + FastAPI + Python
+            </span>
+
+        </footer>
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
